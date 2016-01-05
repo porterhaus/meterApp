@@ -55,6 +55,30 @@
     });
 
     $urlRouterProvider.otherwise('/welcome');
+  });
+
+  app.run(function($rootScope, $ionicLoading, $window) {
+
+    $rootScope.showLoading = function(text) {
+      $rootScope.loading = $ionicLoading.show({
+        template: text ? text : 'Loading...',
+        animation: 'fade-up',
+        showBackdrop: true,
+        maxWidth: 200,
+        showDelay: 0
+      });
+    };
+
+    $rootScope.hideLoading = function() {
+      $ionicLoading.hide();
+    };
+
+    $rootScope.notify = function(text) {
+      $rootScope.showLoading(text);
+      $window.setTimeout(function() {
+        $rootScope.hide();
+      }, 1999);
+    };
 
   });
 
