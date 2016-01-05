@@ -14,7 +14,7 @@
     });
   });
 
-  app.config(function($stateProvider, $urlRouterProvider) { //$ionicConfigProvider
+  app.config(function($stateProvider, $urlRouterProvider) { 
 
     $stateProvider
 
