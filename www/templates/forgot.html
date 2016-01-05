@@ -1,11 +1,19 @@
 <ion-modal-view>
   <ion-header-bar>
-    <h1 class="title">My Modal title</h1>
+    <h1 class="title">Forgot</h1>
     <div class="buttons">
       <button class="button button-clear" ng-click="closeModal()">Close</button>
     </div>
   </ion-header-bar>
-  <ion-content>
-    Hello
+  <ion-content class="padding">
+    <h3>Forgot Password?</h3>
+    <small>It happens to the best of us.</small>
+    <div class="list">
+      <label class="item item-input center-input-label item-input-bottom-border-only">
+          <input type="text" placeholder="Email">
+      </label>
+      <p>An email will be sent with a link to reset your password.</p>
+      <button class="button button-block button-positive" ng-click="reset(data)">Reset</button>
+    </div>
   </ion-content>
 </ion-modal-view>

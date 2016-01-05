@@ -1,5 +1,29 @@
 <ion-view view-title="Register">
   <ion-content class="padding">
-    <h1>Register!</h1>
+    <h3>Sign Up!</h3>
+    <small>We no spam email, Yay!</small>
+
+    <div class="list">
+        <label class="item item-input center-input-label item-input-bottom-border-only">
+            <input type="text" placeholder="username" ng-model="name.username" class="center-input-text">
+        </label>
+        <label class="item item-input center-input-label item-input-bottom-border-only">
+            <input type="text" placeholder="Email" ng-model="data.email" class="center-input-text">
+        </label>
+        <label class="item item-input center-input-label item-input-bottom-border-only">
+            <input type="password" placeholder="Password" ng-model="data.password" class="center-input-text">
+        </label>
+        <label class="item item-input center-input-label item-input-bottom-border-only">
+            <input type="password" placeholder="Password_Confirmation" ng-model="data.password_confirmation" class="center-input-text">
+        </label>
+
+        <p>You agree to comply with our terms and conditions.</p>
+        <button type="button" name="signin" class="button button-block button-positive" ui-sref="login">
+          Sign Up
+        </button>
+        <div class="list">
+          Already registered? <a ui-sref="login">Sign In.</a>
+        </div>
+    </div>
   </ion-content>
 </ion-view>
